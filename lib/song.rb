@@ -40,9 +40,8 @@ class Song
     end
     
     genre_count 
-    
-    
   end
+  
   
   def self.artist_count(artist)
     artist_count= Hash.new
@@ -54,9 +53,5 @@ class Song
       end
     end
     artist_count
-    
-    
-    
-    
     
   end
