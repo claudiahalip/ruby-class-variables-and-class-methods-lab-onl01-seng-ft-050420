@@ -45,7 +45,7 @@ class Song
   
   def self.artist_count 
     artist_count= Hash.new
-    a.each_with_object do |art, artist_count| 
+    @@artist.each_with_object do |art, artist_count| 
       if artist_count[art]
         artist_count[art] += 1 
       else
