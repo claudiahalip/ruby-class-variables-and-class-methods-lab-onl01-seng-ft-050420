@@ -43,16 +43,16 @@ class Song
   end
   
   
-  def self.artist_count(@@artist)
+  def self.artist_count(artist)
     artist_count= Hash.new
-    @@artist.each_with_object do |art, artist_count| 
+    artist.each_with_object do |art, artist_count| 
       if artist_count[art]
         artist_count[art] += 1 
       else
         artist_count[art] = 1
       end
     end
-    artist_count
+    artist_count(@@artist)
   end
   
 end
