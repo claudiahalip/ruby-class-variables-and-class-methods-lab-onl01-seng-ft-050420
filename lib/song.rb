@@ -28,10 +28,10 @@ class Song
     return @@artists.uniq
   end
     
-  def self.genre_count(genre)
+  def self.genre_count
     
     genre_count = Hash.new
-    genre.each_with_object do |gen, genre_count| 
+    @@genre.each_with_object do |gen, genre_count| 
       if genre_count[gen]
         genre_count[gen] += 1 
       else
@@ -39,7 +39,7 @@ class Song
       end
     end
     
-    genre_count(@@genres) 
+    genre_count
   end
   
   
