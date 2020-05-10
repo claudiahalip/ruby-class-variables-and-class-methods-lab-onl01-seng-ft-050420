@@ -34,6 +34,7 @@ class Song
     @@genres.each_with_object do |genre, genre_count| 
       if genre_count[genre]
       genre_count[genre] += 1 
+    else
     end
     end
     
