@@ -28,14 +28,14 @@ class Song
     return @@artists.uniq
   end
     
-  def self.genre_count
+  def self.genre_count(genre)
     
     genre_count = Hash.new
-    @@genres.each_with_object do |genre, genre_count| 
-      if genre_count[genre]
-        genre_count[genre] += 1 
+    @@genres.each_with_object do |gen, genre_count| 
+      if genre_count[gen]
+        genre_count[gen] += 1 
       else
-        genre_count[genre] = 1
+        genre_count[gen] = 1
       end
     end
     
@@ -44,13 +44,19 @@ class Song
     
   end
   
-  def self.artist_count(genre)
-    artist_count = Hash.new
-    @@artists.inject(artist_count.new(0)) { |total, e| total[e] += 1 ;total}
-    
+  def self.artist_count(artist)
+    artist_count= Hash.new
+    @@artist.each_with_object do |art, artist_count| 
+      if artist_count[art]
+        artist_count[art] += 1 
+      else
+        artist_count[art] = 1
+      end
+    end
     artist_count
     
     
     
+    
+    
   end
-end
