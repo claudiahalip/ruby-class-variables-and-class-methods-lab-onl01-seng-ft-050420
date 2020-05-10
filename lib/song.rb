@@ -43,9 +43,9 @@ class Song
   end
   
   
-  def self.artist_count (artist)
+  def self.artist_count 
     artist_count= Hash.new
-    artist.each_with_object do |art, artist_count| 
+    a.each_with_object do |art, artist_count| 
       if artist_count[art]
         artist_count[art] += 1 
       else
