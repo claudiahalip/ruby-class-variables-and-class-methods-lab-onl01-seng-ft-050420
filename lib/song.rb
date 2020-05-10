@@ -30,12 +30,12 @@ class Song
     
   def self.genre_count
     
-    genre_count = Hash.new
-    @@genres.each_with_object do |gen, genre_count| 
-      if genre_count[gen]
-        genre_count[gen] += 1 
+    genre_num = Hash.new
+    @@genres.each_with_object do |gen, genre_num| 
+      if genre_num[gen]
+        genre_num[gen] += 1 
       else
-        genre_count[gen] = 1
+        genre_num[gen] = 1
       end
     end
     
