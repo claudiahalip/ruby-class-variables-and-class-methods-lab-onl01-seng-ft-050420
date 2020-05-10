@@ -30,7 +30,7 @@ class Song
     
   def self.genre_count
     
-    genre_num = Hash.new
+    genre_num = {}
     @@genres.each do | gen | 
       if genre_num[gen]
         genre_num[gen] += 1 
@@ -45,14 +45,14 @@ class Song
   
   def self.artist_count 
     artist_count= Hash.new
-    @@artist.each_with_object do |art, artist_count| 
+    @@artist.each do |art| 
       if artist_count[art]
         artist_count[art] += 1 
       else
         artist_count[art] = 1
       end
     end
-    artist_count(@@artists)
+    artist_count
   end
   
 end
